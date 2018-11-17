@@ -12,7 +12,7 @@
 #OPENAI_LOGDIR=logs/bo_10M_acktr python -m baselines.run --alg=acktr --env=BreakoutNoFrameskip-v0 --num_timesteps=1e7 --save_path=models/bo_10M_acktr 
 
 echo "Training ppo2 on Pong for 10M Steps"
-OPENAI_LOGDIR=logs/pong_10M_ppo2 python -m baselines.run --alg=ppo2 --env=PongFrameskip-v0 --num_timesteps=1e7 --save_path=models/pong_10M_ppo2 
+OPENAI_LOGDIR=logs/pong_10M_ppo2 python -m baselines.run --alg=ppo2 --env=PongFrameskip-v4 --num_timesteps=1e7 --save_path=models/pong_10M_ppo2 
 
 echo "Training acktr on Pong for 10M Steps"
-OPENAI_LOGDIR=logs/pong_10M_acktr python -m baselines.run --alg=acktr --env=PongFrameskip-v0 --num_timesteps=1e7 --save_path=models/pong_10M_acktr 
+OPENAI_LOGDIR=logs/pong_10M_acktr python -m baselines.run --alg=acktr --env=PongFrameskip-v4 --num_timesteps=1e7 --save_path=models/pong_10M_acktr 
