@@ -34,3 +34,8 @@ OPENAI_LOGDIR=logs/qb_10M_ppo2 python -m baselines.run --alg=ppo2 --env=QbertNoF
 echo "Training acktr on Qbert for 10M Steps"
 OPENAI_LOGDIR=logs/qb_10M_acktr python -m baselines.run --alg=acktr --env=QbertNoFrameskip-v0 --num_timesteps=1e7 --save_path=models/qb_10M_acktr 
 
+#
+git pull
+git add .
+git commit -m ' trained on qbert'
+#
