@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "Training ppo2 on Pong for 10M Steps"
 OPENAI_LOGDIR=logs/pong_10M_ppo2_2 python -m baselines.run --alg=ppo2 --env=PongNoFrameskip-v0 --num_timesteps=1e7 --save_path=models/pong_10M_ppo2_2
 
