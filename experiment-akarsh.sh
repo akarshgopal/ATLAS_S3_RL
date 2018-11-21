@@ -41,11 +41,12 @@
 	#OPENAI_LOGDIR=logs/si-pong_10M_acktr python -m baselines.run --alg=acktr --env=PongNoFrameskip-v0 --num_timesteps=1e7 --load_path=models/si_10M_acktr --save_path=models/si-pong_10M_acktr 
 
 
-#Running 
-echo "Training ppo2-si on Pong for 10M Steps"
+#Running
+#20/11/18 Akarsh 
+echo "Training ppo2-si on Pong for 10M Steps R2"
 OPENAI_LOGDIR=logs/si-pong_10M_ppo2_2 python -m baselines.run --alg=ppo2 --env=PongNoFrameskip-v0 --num_timesteps=1e7 --load_path=models/si_10M_ppo2 --save_path=models/si-pong_10M_ppo2_2 
 
-echo "Training acktr-si on Pong for 10M Steps"
+echo "Training acktr-si on Pong for 10M Steps R2"
 OPENAI_LOGDIR=logs/si-pong_10M_acktr_2 python -m baselines.run --alg=acktr --env=PongNoFrameskip-v0 --num_timesteps=1e7 --load_path=models/si_10M_acktr --save_path=models/si-pong_10M_acktr_2 
 
 #TODO
