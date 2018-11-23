@@ -58,10 +58,10 @@
 #Running
 #22/11/18
 echo "Training ppo2-si on QBert for 10M Steps"
-OPENAI_LOGDIR=logs/si_qb_10M_ppo2_1 python -m baselines.run --alg=ppo2 --env=DemonAttackNoFrameskip-v0 --num_timesteps=1e7 --load_path=models/si_10M_ppo2 --save_path=models/si_da_10M_ppo2_1 
+OPENAI_LOGDIR=logs/si_qb_10M_ppo2_1 python -m baselines.run --alg=ppo2 --env=DemonAttackNoFrameskip-v0 --num_timesteps=1e7 --load_path=models/si_10M_ppo2 --save_path=models/si_qb_10M_ppo2_1 
 
 echo "Training ppo2-si on Qbert for 10M Steps R2"
-OPENAI_LOGDIR=logs/si_qb_10M_ppo2_2 python -m baselines.run --alg=ppo2 --env=DemonAttackNoFrameskip-v0 --num_timesteps=1e7 --load_path=models/si_10M_ppo2 --save_path=models/si_da_10M_ppo2_2 
+OPENAI_LOGDIR=logs/si_qb_10M_ppo2_2 python -m baselines.run --alg=ppo2 --env=DemonAttackNoFrameskip-v0 --num_timesteps=1e7 --load_path=models/si_10M_ppo2 --save_path=models/si_qb_10M_ppo2_2 
 
 #TODO
 #echo "Training ppo2-si on DemonAttack for 10M Steps"
