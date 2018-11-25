@@ -9,5 +9,5 @@ OPENAI_LOGDIR=logs/qb_da_10M_acktr_2 python -m baselines.run --alg=acktr --env=D
 #
 git pull
 git add .
-git commit-m ' trained on DemonAttack init QB' 
+git commit -m ' trained on DemonAttack init QB' 
 #

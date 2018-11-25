@@ -1,0 +1,1837 @@
+Logging to logs/qb_si_10M_acktr_2
+---------------------------------
+| explained_variance | -21      |
+| fps                | 196      |
+| nupdates           | 1        |
+| policy_entropy     | 0.8      |
+| policy_loss        | -0.18    |
+| total_timesteps    | 160      |
+| value_loss         | 0.715    |
+---------------------------------
+---------------------------------
+| explained_variance | -4.4     |
+| fps                | 236      |
+| nupdates           | 2        |
+| policy_entropy     | 0.467    |
+| policy_loss        | 0.696    |
+| total_timesteps    | 320      |
+| value_loss         | 11.7     |
+---------------------------------
+---------------------------------
+| explained_variance | -2.68    |
+| fps                | 248      |
+| nupdates           | 3        |
+| policy_entropy     | 0.338    |
+| policy_loss        | -0.295   |
+| total_timesteps    | 480      |
+| value_loss         | 2.95     |
+---------------------------------
+---------------------------------
+| explained_variance | -0.977   |
+| fps                | 256      |
+| nupdates           | 4        |
+| policy_entropy     | 0.472    |
+| policy_loss        | 0.232    |
+| total_timesteps    | 640      |
+| value_loss         | 5.87     |
+---------------------------------
+---------------------------------
+| explained_variance | -1.03    |
+| fps                | 263      |
+| nupdates           | 5        |
+| policy_entropy     | 0.66     |
+| policy_loss        | -0.894   |
+| total_timesteps    | 800      |
+| value_loss         | 6.39     |
+---------------------------------
+---------------------------------
+| explained_variance | -2.29    |
+| fps                | 266      |
+| nupdates           | 6        |
+| policy_entropy     | 0.645    |
+| policy_loss        | 1.66     |
+| total_timesteps    | 960      |
+| value_loss         | 14.9     |
+---------------------------------
+---------------------------------
+| explained_variance | -0.142   |
+| fps                | 269      |
+| nupdates           | 7        |
+| policy_entropy     | 0.431    |
+| policy_loss        | 0.164    |
+| total_timesteps    | 1120     |
+| value_loss         | 3.59     |
+---------------------------------
+---------------------------------
+| explained_variance | -0.0901  |
+| fps                | 270      |
+| nupdates           | 8        |
+| policy_entropy     | 0.569    |
+| policy_loss        | -0.18    |
+| total_timesteps    | 1280     |
+| value_loss         | 2.86     |
+---------------------------------
+---------------------------------
+| explained_variance | 0.693    |
+| fps                | 271      |
+| nupdates           | 9        |
+| policy_entropy     | 0.555    |
+| policy_loss        | 0.392    |
+| total_timesteps    | 1440     |
+| value_loss         | 2.87     |
+---------------------------------
+---------------------------------
+| explained_variance | -0.105   |
+| fps                | 273      |
+| nupdates           | 10       |
+| policy_entropy     | 0.456    |
+| policy_loss        | 0.0427   |
+| total_timesteps    | 1600     |
+| value_loss         | 1.38     |
+---------------------------------
+---------------------------------
+| explained_variance | -0.0205  |
+| fps                | 269      |
+| nupdates           | 11       |
+| policy_entropy     | 0.172    |
+| policy_loss        | 0.034    |
+| total_timesteps    | 1760     |
+| value_loss         | 0.391    |
+---------------------------------
+---------------------------------
+| explained_variance | 0.209    |
+| fps                | 268      |
+| nupdates           | 12       |
+| policy_entropy     | 0.0699   |
+| policy_loss        | 0.00499  |
+| total_timesteps    | 1920     |
+| value_loss         | 0.689    |
+---------------------------------
+---------------------------------
+| explained_variance | 0.214    |
+| fps                | 266      |
+| nupdates           | 13       |
+| policy_entropy     | 0.0196   |
+| policy_loss        | -0.0264  |
+| total_timesteps    | 2080     |
+| value_loss         | 0.985    |
+---------------------------------
+---------------------------------
+| explained_variance | -0.564   |
+| fps                | 265      |
+| nupdates           | 14       |
+| policy_entropy     | 0.0557   |
+| policy_loss        | -0.0139  |
+| total_timesteps    | 2240     |
+| value_loss         | 1.02     |
+---------------------------------
+---------------------------------
+| explained_variance | -0.779   |
+| fps                | 264      |
+| nupdates           | 15       |
+| policy_entropy     | 0.00355  |
+| policy_loss        | 0.00122  |
+| total_timesteps    | 2400     |
+| value_loss         | 44.6     |
+---------------------------------
+---------------------------------
+| explained_variance | 0.0436   |
+| fps                | 264      |
+| nupdates           | 16       |
+| policy_entropy     | 0        |
+| policy_loss        | 0        |
+| total_timesteps    | 2560     |
+| value_loss         | 7.77e+27 |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 264      |
+| nupdates           | 17       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 2720     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 263      |
+| nupdates           | 18       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 2880     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 262      |
+| nupdates           | 19       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 3040     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 262      |
+| nupdates           | 20       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 3200     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 262      |
+| nupdates           | 21       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 3360     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 261      |
+| nupdates           | 22       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 3520     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 259      |
+| nupdates           | 23       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 3680     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 258      |
+| nupdates           | 24       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 3840     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 258      |
+| nupdates           | 25       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 4000     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 258      |
+| nupdates           | 26       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 4160     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 259      |
+| nupdates           | 27       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 4320     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 259      |
+| nupdates           | 28       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 4480     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 260      |
+| nupdates           | 29       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 4640     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 260      |
+| nupdates           | 30       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 4800     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 259      |
+| nupdates           | 31       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 4960     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 259      |
+| nupdates           | 32       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 5120     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 259      |
+| nupdates           | 33       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 5280     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 258      |
+| nupdates           | 34       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 5440     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 258      |
+| nupdates           | 35       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 5600     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 258      |
+| nupdates           | 36       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 5760     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 258      |
+| nupdates           | 37       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 5920     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 258      |
+| nupdates           | 38       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 6080     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 257      |
+| nupdates           | 39       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 6240     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 257      |
+| nupdates           | 40       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 6400     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 257      |
+| nupdates           | 41       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 6560     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 257      |
+| nupdates           | 42       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 6720     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 257      |
+| nupdates           | 43       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 6880     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 256      |
+| nupdates           | 44       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 7040     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 256      |
+| nupdates           | 45       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 7200     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 256      |
+| nupdates           | 46       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 7360     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 256      |
+| nupdates           | 47       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 7520     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 256      |
+| nupdates           | 48       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 7680     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 255      |
+| nupdates           | 49       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 7840     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 255      |
+| nupdates           | 50       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 8000     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 255      |
+| nupdates           | 51       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 8160     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 255      |
+| nupdates           | 52       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 8320     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 255      |
+| nupdates           | 53       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 8480     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 255      |
+| nupdates           | 54       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 8640     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 255      |
+| nupdates           | 55       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 8800     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 255      |
+| nupdates           | 56       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 8960     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 254      |
+| nupdates           | 57       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 9120     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 254      |
+| nupdates           | 58       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 9280     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 254      |
+| nupdates           | 59       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 9440     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 254      |
+| nupdates           | 60       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 9600     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 254      |
+| nupdates           | 61       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 9760     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 254      |
+| nupdates           | 62       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 9920     |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 255      |
+| nupdates           | 63       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 10080    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 255      |
+| nupdates           | 64       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 10240    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 255      |
+| nupdates           | 65       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 10400    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 255      |
+| nupdates           | 66       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 10560    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 256      |
+| nupdates           | 67       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 10720    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 256      |
+| nupdates           | 68       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 10880    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 256      |
+| nupdates           | 69       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 11040    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 257      |
+| nupdates           | 70       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 11200    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 257      |
+| nupdates           | 71       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 11360    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 257      |
+| nupdates           | 72       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 11520    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 258      |
+| nupdates           | 73       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 11680    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 258      |
+| nupdates           | 74       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 11840    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 258      |
+| nupdates           | 75       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 12000    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 258      |
+| nupdates           | 76       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 12160    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 259      |
+| nupdates           | 77       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 12320    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 259      |
+| nupdates           | 78       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 12480    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 259      |
+| nupdates           | 79       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 12640    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 259      |
+| nupdates           | 80       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 12800    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 260      |
+| nupdates           | 81       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 12960    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 260      |
+| nupdates           | 82       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 13120    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 260      |
+| nupdates           | 83       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 13280    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 260      |
+| nupdates           | 84       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 13440    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 260      |
+| nupdates           | 85       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 13600    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 261      |
+| nupdates           | 86       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 13760    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 261      |
+| nupdates           | 87       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 13920    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 261      |
+| nupdates           | 88       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 14080    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 261      |
+| nupdates           | 89       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 14240    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 262      |
+| nupdates           | 90       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 14400    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 262      |
+| nupdates           | 91       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 14560    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 262      |
+| nupdates           | 92       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 14720    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 253      |
+| nupdates           | 93       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 14880    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 246      |
+| nupdates           | 94       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 15040    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 240      |
+| nupdates           | 95       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 15200    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 235      |
+| nupdates           | 96       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 15360    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 230      |
+| nupdates           | 97       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 15520    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 228      |
+| nupdates           | 98       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 15680    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 227      |
+| nupdates           | 99       |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 15840    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 227      |
+| nupdates           | 100      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 16000    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 226      |
+| nupdates           | 101      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 16160    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 226      |
+| nupdates           | 102      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 16320    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 226      |
+| nupdates           | 103      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 16480    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 225      |
+| nupdates           | 104      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 16640    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 225      |
+| nupdates           | 105      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 16800    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 225      |
+| nupdates           | 106      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 16960    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 225      |
+| nupdates           | 107      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 17120    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 224      |
+| nupdates           | 108      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 17280    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 224      |
+| nupdates           | 109      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 17440    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 224      |
+| nupdates           | 110      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 17600    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 224      |
+| nupdates           | 111      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 17760    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 223      |
+| nupdates           | 112      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 17920    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 223      |
+| nupdates           | 113      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 18080    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 223      |
+| nupdates           | 114      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 18240    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 223      |
+| nupdates           | 115      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 18400    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 223      |
+| nupdates           | 116      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 18560    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 222      |
+| nupdates           | 117      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 18720    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 222      |
+| nupdates           | 118      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 18880    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 222      |
+| nupdates           | 119      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 19040    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 222      |
+| nupdates           | 120      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 19200    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 222      |
+| nupdates           | 121      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 19360    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 222      |
+| nupdates           | 122      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 19520    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 123      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 19680    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 124      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 19840    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 125      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 20000    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 126      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 20160    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 127      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 20320    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 220      |
+| nupdates           | 128      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 20480    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 220      |
+| nupdates           | 129      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 20640    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 220      |
+| nupdates           | 130      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 20800    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 220      |
+| nupdates           | 131      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 20960    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 220      |
+| nupdates           | 132      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 21120    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 220      |
+| nupdates           | 133      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 21280    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 220      |
+| nupdates           | 134      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 21440    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 220      |
+| nupdates           | 135      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 21600    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 220      |
+| nupdates           | 136      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 21760    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 220      |
+| nupdates           | 137      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 21920    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 220      |
+| nupdates           | 138      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 22080    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 220      |
+| nupdates           | 139      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 22240    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 220      |
+| nupdates           | 140      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 22400    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 220      |
+| nupdates           | 141      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 22560    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 220      |
+| nupdates           | 142      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 22720    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 220      |
+| nupdates           | 143      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 22880    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 144      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 23040    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 145      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 23200    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 146      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 23360    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 147      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 23520    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 148      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 23680    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 149      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 23840    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 150      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 24000    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 151      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 24160    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 152      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 24320    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 153      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 24480    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 154      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 24640    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 155      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 24800    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 156      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 24960    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 157      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 25120    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 158      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 25280    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 159      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 25440    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 160      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 25600    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 161      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 25760    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 162      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 25920    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 163      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 26080    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 164      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 26240    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 165      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 26400    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 166      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 26560    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 167      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 26720    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 168      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 26880    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 169      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 27040    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 170      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 27200    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 171      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 27360    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 172      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 27520    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 173      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 27680    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 174      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 27840    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 175      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 28000    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 176      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 28160    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 177      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 28320    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 178      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 28480    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 179      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 28640    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 180      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 28800    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 181      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 28960    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 182      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 29120    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 183      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 29280    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 184      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 29440    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 185      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 29600    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 186      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 29760    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 187      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 29920    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 188      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 30080    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 189      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 30240    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 190      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 30400    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 191      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 30560    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 192      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 30720    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 193      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 30880    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 194      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 31040    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 195      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 31200    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 196      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 31360    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 197      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 31520    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 198      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 31680    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 199      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 31840    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 200      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 32000    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 201      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 32160    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 202      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 32320    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 203      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 32480    |
+| value_loss         | nan      |
+---------------------------------
+---------------------------------
+| explained_variance | nan      |
+| fps                | 221      |
+| nupdates           | 204      |
+| policy_entropy     | nan      |
+| policy_loss        | nan      |
+| total_timesteps    | 32640    |
+| value_loss         | nan      |
+---------------------------------

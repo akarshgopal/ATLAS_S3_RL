@@ -9,5 +9,5 @@ OPENAI_LOGDIR=logs/qb_pong_10M_acktr_2 python -m baselines.run --alg=acktr --env
 #
 git pull
 git add .
-git commit-m ' trained on pong init QB' 
+git commit -m ' trained on pong init QB' 
 #
