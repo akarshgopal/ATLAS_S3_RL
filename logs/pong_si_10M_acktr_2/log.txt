@@ -1,1 +1,0 @@
-Logging to logs/pong_si_10M_acktr_2
