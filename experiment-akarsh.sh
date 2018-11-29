@@ -93,9 +93,8 @@
 #echo "Training ppo2-qb on pong for 10M Steps R2"
 #OPENAI_LOGDIR=logs/qb_pong_10M_ppo2_2 python -m baselines.run --alg=ppo2 --env=PongNoFrameskip-v0 --num_timesteps=1e7 --load_path=models/qb_10M_ppo2_1 --save_path=models/qb_pong_10M_ppo2_2 
 
-#Running
-#26/11/18
 
+#26/11/18
 #echo "Training ppo2-qb on da for 10M Steps"
 #OPENAI_LOGDIR=logs/qb_da_10M_ppo2_1 python -m baselines.run --alg=ppo2 --env=DemonAttackNoFrameskip-v0 --num_timesteps=1e7 --load_path=models/qb_10M_ppo2_1 --save_path=models/qb_da_10M_ppo2_1 
 
@@ -105,6 +104,22 @@
 #echo "Training ppo2-pong on si for 10M Steps "
 #OPENAI_LOGDIR=logs/pong_si_10M_ppo2_1 python -m baselines.run --alg=ppo2 --env=SpaceInvadersNoFrameskip-v0 --num_timesteps=1e7 --load_path=models/pong_10M_ppo2_1 --save_path=models/pong_si_10M_ppo2_1 
 
+#echo "Training ppo2-pong on si for 10M Steps R2"
+#OPENAI_LOGDIR=logs/pong_si_10M_ppo2_2 python -m baselines.run --alg=ppo2 --env=SpaceInvadersNoFrameskip-v0 --num_timesteps=1e7 --load_path=models/pong_10M_ppo2_1 --save_path=models/pong_si_10M_ppo2_2 
+
+#27/11/18
+#echo "Training ppo2-pong on qb for 10M Steps "
+#OPENAI_LOGDIR=logs/pong_qb_10M_ppo2_1 python -m baselines.run --alg=ppo2 --env=QbertNoFrameskip-v0 --num_timesteps=1e7 --load_path=models/pong_10M_ppo2_1 --save_path=models/pong_qb_10M_ppo2_1 
+
+#echo "Training ppo2-pong on qb for 10M Steps R2"
+#OPENAI_LOGDIR=logs/pong_qb_10M_ppo2_2 python -m baselines.run --alg=ppo2 --env=QbertNoFrameskip-v0 --num_timesteps=1e7 --load_path=models/pong_10M_ppo2_1 --save_path=models/pong_qb_10M_ppo2_2 
+
+#Running
+#28/11/18
+echo "Training ppo2-pong on da for 10M Steps "
+OPENAI_LOGDIR=logs/pong_da_10M_ppo2_1 python -m baselines.run --alg=ppo2 --env=DemonAttackNoFrameskip-v0 --num_timesteps=1e7 --load_path=models/pong_10M_ppo2_1 --save_path=models/pong_da_10M_ppo2_1 
+
+echo "Training ppo2-pong on da for 10M Steps R2"
+OPENAI_LOGDIR=logs/pong_da_10M_ppo2_2 python -m baselines.run --alg=ppo2 --env=DemonAttackNoFrameskip-v0 --num_timesteps=1e7 --load_path=models/pong_10M_ppo2_1 --save_path=models/pong_da_10M_ppo2_2 
+
 #TODO
-echo "Training ppo2-pong on si for 10M Steps R2"
-OPENAI_LOGDIR=logs/pong_si_10M_ppo2_2 python -m baselines.run --alg=ppo2 --env=SpaceInvadersNoFrameskip-v0 --num_timesteps=1e7 --load_path=models/pong_10M_ppo2_1 --save_path=models/pong_si_10M_ppo2_2 
