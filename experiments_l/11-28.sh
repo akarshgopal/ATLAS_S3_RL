@@ -15,5 +15,5 @@ OPENAI_LOGDIR=logs/pong_da_10M_acktr_2_recovery python -m baselines.run --alg=ac
 #
 git pull
 git add .
-git commit -m ' trained on QB init pong (2runs)' 
+git commit -m ' trained on DA init pong (2runs)' 
 #
