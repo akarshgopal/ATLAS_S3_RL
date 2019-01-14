@@ -21,28 +21,101 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Diagrammatic Model of Reinforcement Learning (Sutton \& Barto, 1998).\relax }}{3}{figure.caption.1}}
 \@writefile{toc}{\contentsline {section}{\numberline {II}Theoretical Background}{3}{section.2}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Diagrammatic Model of Actor-Critic Architecture (Patel, 2017).\relax }}{5}{figure.caption.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {III}Methodology}{8}{section.3}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Possible Metrics of TL in RL (Taylor \& Stone, 2009).\relax }}{9}{figure.caption.3}}
-\@writefile{toc}{\contentsline {section}{\numberline {III}Methodology}{9}{section.3}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Visualisation of Setup.\relax }}{9}{figure.caption.4}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Dependency hierarchy of the studied phenomena.\relax }}{10}{figure.caption.6}}
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Distribution of Initializations of each Game and the Game that it was Subsequently Transferred to Completed for both ACKTR and PPO2. The ‘x2’ within the cells says that each of the training runs was run twice. Cells with ‘x1’ refer to the self-transfer runs.\relax }}{11}{table.caption.5}}
 \@writefile{toc}{\contentsline {section}{\numberline {IV}Results}{12}{section.4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Screenshots of the four selected games. From left to right: Q*Bert, Pong, Space Invaders and Demon Attack.\relax }}{13}{figure.caption.7}}
-\@writefile{toc}{\contentsline {section}{\numberline {V}Inferences}{13}{section.5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces 500-Point rolling average of the game score plotted against the 10M timesteps. The hyphenated lines superimposed onto these graphs represents the thresholds (human level performance). Each column of graphs represents an algorithm, as PPO2 and ACKTR runs from left to right respectively.Each row of graphs represents a game as Q*Bert, Pong, Space Invaders and Demon Attack from top to bottom respectively. The titles of the graphs follow the naming convention: game\_algorithm. The legend follows the naming convention: source-game\_target-game\_number-of-timesteps\_algorithm\_run-number\relax }}{14}{figure.caption.8}}
-\@writefile{toc}{\contentsline {section}{\numberline {VI}Conclusion}{15}{section.6}}
-\@writefile{toc}{\contentsline {section}{\numberline {VII}Discussion}{15}{section.7}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Conceptual complexity of the games are described using the above features as visible on the game screens.\relax }}{13}{table.caption.7}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces The results of the analysis of the experimental data. Each column corresponds to one of the metrics we selected to study the effects of TL. Entries emboldened represent the maximum or the minimum of the respective metric within the (algorithm, target task) combination. Entries with `-` mean the threshold was never reached within 10M timesteps. For cells with *, the values were approximated manually by finding time at which the average of the two runs reaches the threshold because one of the runs does not reach the threshold within 10M frames.\relax }}{14}{table.caption.10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Screenshots of the four selected games. From left to right: Q*Bert, Pong, Space Invaders and Demon Attack.\relax }}{15}{figure.caption.8}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces  A matrix representing the instances of positive and negative transfer with respect to each (source,target) task combination. Red colour indicates negative transfer and Green colour indicates positive transfer.\relax }}{15}{table.caption.11}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Inferences}{15}{section.5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces 500-Point rolling average of the game score plotted against the 10M timesteps. The hyphenated lines superimposed onto these graphs represents the thresholds (human level performance). Each column of graphs represents an algorithm, as PPO2 and ACKTR runs from left to right respectively. Each row of graphs represents a game as Q*Bert, Pong, Space Invaders and Demon Attack from top to bottom respectively. The titles of the graphs follow the naming convention: game\_algorithm. The legend follows the naming convention: source-game\_target-game\_number-of-timesteps\_algorithm\_run-number\relax }}{16}{figure.caption.9}}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Conclusion}{17}{section.6}}
+\@writefile{toc}{\contentsline {section}{\numberline {VII}Discussion}{17}{section.7}}
+\@writefile{toc}{\contentsline {section}{\numberline {VIII}Acknowledgments}{18}{section.8}}
 \citation{Figueredo:2009dg}
 \bibcite{Figueredo:2009dg}{Figueredo and Wolf, 2009}
-\@writefile{toc}{\contentsline {section}{\numberline {VIII}Acknowledgments}{16}{section.8}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Visual representation of a Neural Network.\relax }}{17}{figure.caption.9}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces (Chokmani, Khalil, Ouarda, \& Bourdages, 2007) forward propagation through a single neuron is depicted.\relax }}{17}{figure.caption.10}}
-\@writefile{toc}{\contentsline {paragraph}{Forward propagation}{17}{paragraph*.11}}
-\@writefile{toc}{\contentsline {paragraph}{Backpropagation}{17}{paragraph*.12}}
-\@writefile{toc}{\contentsline {paragraph}{Forward Propagation}{18}{paragraph*.14}}
-\@writefile{toc}{\contentsline {paragraph}{Pooling}{18}{paragraph*.15}}
-\@writefile{toc}{\contentsline {paragraph}{Convolution layer and progress through the network}{18}{paragraph*.16}}
-\@writefile{toc}{\contentsline {paragraph}{Backward Propagation}{18}{paragraph*.17}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Layers of a CNN (Ma, Xiang, Du, \& Fan, 2018).\relax }}{19}{figure.caption.13}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces (Agarwal, 2017), the derivative of the cost function just as a normal neural network but it updates the value according to the sum of the derivatives of the cost function (shown in the middle matrix) with respect to each value that is taken into account by a specific value in the mask (first matrix)\relax }}{19}{figure.caption.18}}
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces (Gillis, 2006), creating an algorithm that maximises more precisely and efficiently using $2^{nd}$ order optimisation .\relax }}{19}{figure.caption.19}}
+\bibcite{}{1}
+\bibcite{}{2}
+\bibcite{}{3}
+\bibcite{}{4}
+\bibcite{}{5}
+\bibcite{}{6}
+\bibcite{}{7}
+\bibcite{}{8}
+\bibcite{}{9}
+\bibcite{}{10}
+\bibcite{}{11}
+\bibcite{}{12}
+\bibcite{}{13}
+\bibcite{}{14}
+\bibcite{}{15}
+\bibcite{}{16}
+\bibcite{}{17}
+\bibcite{}{18}
+\bibcite{}{19}
+\bibcite{}{20}
+\bibcite{}{21}
+\bibcite{}{22}
+\bibcite{}{23}
+\bibcite{}{24}
+\bibcite{}{25}
+\bibcite{}{26}
+\bibcite{}{27}
+\bibcite{}{28}
+\bibcite{}{29}
+\bibcite{}{30}
+\bibcite{}{31}
+\bibcite{}{32}
+\bibcite{}{33}
+\bibcite{}{34}
+\bibcite{}{35}
+\bibcite{}{36}
+\bibcite{}{37}
+\bibcite{}{38}
+\bibcite{}{39}
+\bibcite{}{40}
+\bibcite{}{41}
+\bibcite{}{42}
+\bibcite{}{43}
+\bibcite{}{44}
+\bibcite{}{45}
+\bibcite{}{46}
+\bibcite{}{47}
+\bibcite{}{48}
+\bibcite{}{49}
+\bibcite{}{50}
+\bibcite{}{51}
+\bibcite{}{52}
+\bibcite{}{53}
+\bibcite{}{54}
+\bibcite{}{55}
+\bibcite{}{56}
+\bibcite{}{57}
+\bibcite{}{58}
+\bibcite{}{59}
+\bibcite{}{60}
+\bibcite{}{61}
+\bibcite{}{62}
+\bibcite{}{63}
+\bibcite{}{64}
+\bibcite{}{65}
+\@writefile{toc}{\contentsline {paragraph}{Forward propagation}{22}{paragraph*.14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Visual representation of a Neural Network.\relax }}{22}{figure.caption.12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces (Chokmani, Khalil, Ouarda, \& Bourdages, 2007) forward propagation through a single neuron is depicted.\relax }}{22}{figure.caption.13}}
+\@writefile{toc}{\contentsline {paragraph}{Back-Propagation}{23}{paragraph*.15}}
+\@writefile{toc}{\contentsline {paragraph}{Forward Propagation}{23}{paragraph*.17}}
+\@writefile{toc}{\contentsline {paragraph}{Pooling}{23}{paragraph*.18}}
+\@writefile{toc}{\contentsline {paragraph}{Convolution layer and progress through the network}{23}{paragraph*.19}}
+\@writefile{toc}{\contentsline {paragraph}{Back-Propagation}{23}{paragraph*.20}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Layers of a CNN (Ma, Xiang, Du, \& Fan, 2018).\relax }}{24}{figure.caption.16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces (Agarwal, 2017), the derivative of the cost function just as a normal neural network but it updates the value according to the sum of the derivatives of the cost function (shown in the middle matrix) with respect to each value that is taken into account by a specific value in the mask (first matrix)\relax }}{25}{figure.caption.21}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Device Hardware Specifications\relax }}{25}{table.caption.23}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces (Gillis, 2006), creating an algorithm that maximises more precisely and efficiently using $2^{nd}$ order optimisation .\relax }}{25}{figure.caption.22}}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Software Setup for the study\relax }}{26}{table.caption.24}}
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Training runs per device in chronological order\relax }}{26}{table.caption.25}}
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Hyperparameters as extracted from OpenAI Baselines(2018).The terms do not necessarily carry same meaning for both algorithms.\relax }}{27}{table.caption.26}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Game score(Raw data) at each timestep during the 10M timesteps \relax }}{27}{figure.caption.27}}

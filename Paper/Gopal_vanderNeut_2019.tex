@@ -76,9 +76,15 @@
 \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
 \linespread{1.05} % Line spacing - Palatino needs more space between lines
 \usepackage{microtype} % Slightly tweak font spacing for aesthetics
-\usepackage{graphicx}
-\usepackage[english]{babel} % Language hyphenation and typographical rules
 
+%Extra packages added by A.Gopal
+\usepackage{graphicx}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{tabularx}
+\usepackage[english]{babel} % Language hyphenation and typographical rules
+\usepackage[hyphens]{url}
 \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
 \usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
 \usepackage{booktabs} % Horizontal rules in tables
@@ -87,7 +93,7 @@
 
 \usepackage{enumitem} % Customized lists
 \setlist[itemize]{noitemsep} % Make itemize lists more compact
-
+\usepackage{float}
 \usepackage{abstract} % Allows abstract customization
 \renewcommand{\abstractnamefont}{\normalfont\bfseries} % Set the "Abstract" text to bold
 \renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
@@ -184,7 +190,7 @@ This study focuses on the virtual-technological phenomena displayed by ACKTR (Wu
 \section{Theoretical Background}
 
 \subsection*{Reinforcement Learning (RL)}
-RL is a sub-field of AI that deals with situations where an `agent' \ acts in an `environment' . The agent has a particular goal to achieve and the environment provides feedback to the agent which can be used to progress towards the agent`s goal. The objective of RL is to develop methods to allow the agent to learn to achieve the goal while acting within the environment. 
+RL is a sub-field of AI that deals with situations where an `agent` \ acts in an `environment` . The agent has a particular goal to achieve and the environment provides feedback to the agent which can be used to progress towards the agent`s goal. The objective of RL is to develop methods to allow the agent to learn to achieve the goal while acting within the environment. 
 
 The model used for an RL system (Sutton \& Barto, 1998) is as follows: 
 
@@ -258,14 +264,14 @@ The benefit of using this architecture is that the actor receives feedback from 
 
 \subsection*{Algorithms Researched}
 \subsubsection*{ACKTR (Wu et al., 2017)}
-Actor-Critic using Kronecker-Factored Trust Region (ACKTR, pronounced “actor”) is an algorithm that utilises second-order optimisation to achieve very accurate policy updates and allows the algorithm to achieve a high sample efficiency. ACKTR uses a combination of natural gradient descent (Kakade, 2002), Kronecker-Factored Approximate Curvature (Martens, \& Grosse, 2015) and trust region (Schulman et al., 2015) to update its parameters. 
+Actor-Critic using Kronecker-Factored Trust Region (ACKTR, pronounced `actor`) is an algorithm that utilises second-order optimisation to achieve very accurate policy updates and allows the algorithm to achieve a high sample efficiency. ACKTR uses a combination of natural gradient descent (Kakade, 2002), Kronecker-Factored Approximate Curvature (Martens, \& Grosse, 2015) and trust region (Schulman et al., 2015) to update its parameters. 
 
 Natural gradient descent involves computation of the Fisher information matrix. This information matrix represents how probable the estimations produced by the network are using the covariance of the log likelihood of the estimation given the policy: 
 \[ F = E_{p(x|\theta)}[\bigtriangledown \log p(x|\theta) \bigtriangledown \log p(x|\theta)^{T}] \]
 The inverse of the Fisher matrix, which is required in natural gradient descent, is too heavy to compute because of its sheer size of [$(number \ of \ parameters)^{2}$, $(number \ of \ parameters)^{2}$], considering that the number of parameters in a convolutional neural network often go beyond million (Wu et al., 2017). To work around this, ACKTR uses Kronecker-Factored Approximate Curvature (K-FAC) (Martens, \& Grosse, 2015) in both its actor and critic model, which makes this optimisation computationally feasible. K-FAC uses a number of simplifications to obtain an approximation of the Fisher matrix which works fairly well in practice. The trust region approach of ACKTR ensures that the policy will not adapt too strongly to a single experience by using the approximation of the Fisher matrix to estimate the certainty of the gradient computed to ensure the magnitude of the step-update does not pass the threshold set for uncertainty. ACKTR uses the combination of trust region and K-FAC proposed by Ba, Grosse, \& Martens (2016) and brings this optimization method together with the architecture of \textbf{Asynchronous Advantage Actor Critic} (A3C) (Mnih, et al., 2016). The A3C architecture is a variant of the earlier explained advantage actor-critic model that allows multiple actors to act in an environment simultaneously while updating only one critic model. This is an adaptation that only has an impact on the efficiency of computation and has no implications for the learning of the agent (Mnih et al., 2016). Therefore, this will not be addressed further.
 
 \subsubsection*{PPO (Schulman et al., 2017)}
-PPO is a policy optimisation method that empirically performs at least as well as trust region methods but is simpler to implement since it uses a first-order optimisation method. The algorithm effectively uses the same architecture as ACKTR but uses a novel method for policy optimisation: PPO performs stochastic gradient ascent updates on the parameters of the policy in order to maximise a ‘surrogate’ objective function (Achiam, Wu, Morales, Marciniak, Bastovanovicz, Hesse, 2018). The OpenAI Baselines (OpenAIb, 2018) implementation of PPO uses the \lq clip\rq \ approach mentioned in Schulman et al. (2017). Therefore, the surrogate objective function involves a clipping term that helps keep the updated policy parameters close to the previous policy parameters and therefore prevents large step-changes on the policy parameters that may make learning unstable. This allows PPO to make the largest possible update to parameters with the collected data, without compromising learning stability. PPO bypasses the complexity of trust region methods such as ACKTR using this clipping term, without compromising on performance.
+PPO is a policy optimisation method that empirically performs at least as well as trust region methods but is simpler to implement since it uses a first-order optimisation method. The algorithm effectively uses the same architecture as ACKTR but uses a novel method for policy optimisation: PPO performs stochastic gradient ascent updates on the parameters of the policy in order to maximise a `surrogate` objective function (Achiam, Wu, Morales, Marciniak, Bastovanovicz, Hesse, 2018). The OpenAI Baselines (OpenAIb, 2018) implementation of PPO uses the `clip` \ approach mentioned in Schulman et al. (2017). Therefore, the surrogate objective function involves a clipping term that helps keep the updated policy parameters close to the previous policy parameters and therefore prevents large step-changes on the policy parameters that may make learning unstable. This allows PPO to make the largest possible update to parameters with the collected data, without compromising learning stability. PPO bypasses the complexity of trust region methods such as ACKTR using this clipping term, without compromising on performance.
 
 In PPO, the advantage is estimated using a value function and a generalised advantage estimation method (Schulman, Moritz, Levine, Jordan, Abbeel, 2015). The algorithm uses a policy network and a value function network to estimate the surrogate objective function. In the case of the Baselines implementation of PPO for Atari games, the policy is a CNN which takes the screen of the game as input and maps this to an action space. 
 
@@ -276,7 +282,7 @@ The Baselines implementation of PPO is called PPO2 because it is a variant that 
 \subsection*{Environment Used For Study}
 The \textbf{Arcade Learning Environment} (ALE) (Bellemare et al., 2013) is an emulator of the Atari-2600 console for video games and is specifically designed to evaluate different algorithms independent of their domain and provides an interface with a large number of Atari-2600 games for testing RL algorithms (Brockman, Cheung, Pettersson, Schneider, Schulman et al., 2016). OpenAI Baselines (OpenAIa, 2018) is a set of high-quality, open-source implementations of the state of the art RL algorithms and supports the ALE as an environment using the OpenAI Gym toolkit (OpenAIb, 2018), which provides an interface between popular RL environments such as the ALE and programming languages such as Python. OpenAI Baselines allows saving of the parameters of the trained model and loading of these weights as initialisation for other runs. It also has a logging feature that stores the total reward per episode of the agent over the 10M timesteps of the run. OpenAI Gym and the ALE can be considered complementary platforms, designed for the objective evaluation and comparison of algorithms and, ALE specifically, for TL as well (Bellemare, et al., 2013; Brockman, et al., 2016). OpenAI Baselines allows state of the art algorithms to be tested on these platforms Therefore OpenAI Baselines and implicitly OpenAI Gym and ALE were used for the study.
 
-The version of ALE used during experimentation has deliberately implemented stochasticity into the Atari-2600 games (Machado, Bellemare, Talvitie, Veness, Hausknecht \& Bowling, 2017) but the Atari-2600 games are deterministic otherwise (Hausknecht \& Stone, 2015). The specific source of stochasticity in the Baselines implementation of (game name)NoFrameskip-v0 is called ‘sticky actions’, a probability that the action of the previous frame is repeated in the current frame instead of the inputted action. In this case, the probability that an action would be ‘sticky’ was set 0.25 (OpenAIa, 2018), in accordance with the suggestion from Machado et al. (2017).
+The version of ALE used during experimentation has deliberately implemented stochasticity into the Atari-2600 games (Machado, Bellemare, Talvitie, Veness, Hausknecht \& Bowling, 2017) but the Atari-2600 games are deterministic otherwise (Hausknecht \& Stone, 2015). The specific source of stochasticity in the Baselines implementation of (game name)NoFrameskip-v0 is called `sticky actions`, a probability that the action of the previous frame is repeated in the current frame instead of the inputted action. In this case, the probability that an action would be `sticky` was set 0.25 (OpenAIa, 2018), in accordance with the suggestion from Machado et al. (2017).
 
 \subsection*{Transfer Learning (TL)}
 Transfer Learning is the process of improving learning performance in a particular \lq target\rq \ task having already learned to perform a related, but different, \lq source\rq \ task (Taylor \& Stone, 2009). Psychological literature studies TL in humans and develops ideas analogous to TL in Machine Learning research (Thorndike \& Woodworth, 1901; Skinner, 1953).
@@ -341,7 +347,7 @@ To create a good overview of how ACKTR and PPO2 behave in TL all possible combin
 
 The Baselines implementation of PPO2 and ACKTR from OpenAI (OpenAIa, 2018) were used in this experiment to ensure a stable and thoroughly tested implementation of the algorithms. 
 The same software-environment was used for all the runs to avoid any unnecessary variables that could influence the experiment.
-Hyperparameters of the algorithms were not changed from the default Baselines implementation (OpenAI, 2018) and can be found in Appendix C. The computer hardware specifications such as processor clock speed, computer memory, and GPU memory affect the speed of training. The higher the specifications of this hardware, the faster is the training. Due to limitations in available equipment and time, two devices had to be used to carry out all training runs. As seen in Figure 5, the virtual technological phenomena being studied relies on a hierarchy of software and hardware. 
+Hyperparameters of the algorithms were not changed from the default Baselines implementation (OpenAI, 2018) and can be found in Appendix B. The computer hardware specifications such as processor clock speed, computer memory, and GPU memory affect the speed of training. The higher the specifications of this hardware, the faster is the training. Due to limitations in available equipment and time, two devices had to be used to carry out all training runs. As seen in Figure 5, the virtual technological phenomena being studied relies on a hierarchy of software and hardware. 
 
 \begin{figure}
 	\includegraphics[width=\columnwidth]{fig5.png} 
@@ -360,7 +366,7 @@ The following metrics were chosen based on suggestions by Taylor and Stone (2009
 	\item \textbf{Scores at 0M, 2.5M, 5M, 7.5M and 9.9M timesteps}. M stands for Million.
 	\begin{itemize}
 		\item 0M. This is measured by finding the 500-point rolling average of the first 500 episodes and helps in measuring the jumpstart (Taylor \& Stone, 2009)
-		\item 2.5M, 5M, and 7.5M These are the 500-point rolling averages of scores at each of these times respectively, providing insight into the algorithms\rq \  training.
+		\item 2.5M, 5M, and 7.5M These are the 500-point rolling averages of scores at each of these times respectively, providing insight into the algorithms`s training.
 		\item 9.9M. This is measured by finding the 500-point rolling average of the score at 9.9M timesteps. This indicates asymptotic performance (Taylor \& Stone, 2009)
 	\end{itemize}
 \end{enumerate}
@@ -379,6 +385,30 @@ The effects of TL were then assessed as positive if a majority of the above metr
 \section{Results}
 
 \subsection*{Game Complexity}
+
+\begin{table*}[]
+	\begin{tabular}{p{2cm} p{3cm}p{3cm}p{3cm}p{3cm}}
+	\multicolumn{5}{c}{\textbf{Game Complexity}} \\
+	& \multicolumn{1}{c}{\textbf{Q*Bert}} & \multicolumn{1}{c}{\textbf{Pong}} & \multicolumn{1}{c}{\textbf{Space Invaders}} & \multicolumn{1}{c}{\textbf{Demon Attack}} \\
+	\rowcolor[HTML]{EFEFEF} 
+	\textbf{Color Scheme} & Black, Yellow, Navy Blue, Sky Blue, Red, & Brown, Red, Green, White & Black, Yellow, Green, Orange & Black, Yellow, Purple, Navy Blue \\
+	\textbf{Background Color} & Black & Brown & Black & Black \\
+	\rowcolor[HTML]{EFEFEF} 
+	\textbf{Degrees of Freedom} & 3 & 1 & 2 & 2 \\
+	\textbf{Score Scale} & {[}0,Inf) & {[}-21,21{]} & {[}0,Inf) & {[}0,Inf) \\
+	\rowcolor[HTML]{EFEFEF} 
+	\textbf{Action space} & Discrete(6) & Discrete(6) & Discrete(6) & Discrete(6) \\
+	\textbf{Movement Orientation} & Vertical and Horizontal /Diagonal movement & Vertical movement only & Horizontal movement only & Horizontal Movement only \\
+	\rowcolor[HTML]{EFEFEF} 
+	\textbf{Opponents} & Present & Present & Present & Present \\
+	\textbf{Behavior of opponent} & Opponent attempts to block the player in various ways & Attempt to return to ball & Move from left to right while shooting at the player. Move one down when reaching the edge. & Move left, right, up and down in an irregular pattern while shooting at the player \\
+	\rowcolor[HTML]{EFEFEF} 
+	\textbf{Objective of player} & Avoid opponent, while activating all tiles & Bounce ball past opponent & Shoot all opponents before the opponents reach the ground while avoiding fire & Shoot all opponents before opponents reach the ground while avoiding fire \\
+	\textbf{Human Level performance (threshold score)} & 13455 & 9.3 & 1652 & 3401
+\end{tabular}
+\caption{Conceptual complexity of the games are described using the above features as visible on the game screens.}
+\end{table*}
+
 \begin{figure*}[h]
 	\includegraphics[width=\textwidth]{fig6.png} 
 	\caption{Screenshots of the four selected games. From left to right: Q*Bert, Pong, Space Invaders and Demon Attack.}
@@ -395,16 +425,109 @@ From the experiments, the reward achieved by the agent at the end of each episod
 
 \begin{figure*}
 	\includegraphics[width=\textwidth]{fig7.png} 
-	\caption{500-Point rolling average of the game score plotted against the 10M timesteps. The hyphenated lines superimposed onto these graphs represents the thresholds (human level performance). Each column of graphs represents an algorithm, as PPO2 and ACKTR runs from left to right respectively.Each row of graphs represents a game as Q*Bert, Pong, Space Invaders and Demon Attack from top to bottom respectively. The titles of the graphs follow the naming convention: game\_algorithm. The legend follows the naming convention: source-game\_target-game\_number-of-timesteps\_algorithm\_run-number}
+	\caption{500-Point rolling average of the game score plotted against the 10M timesteps. The hyphenated lines superimposed onto these graphs represents the thresholds (human level performance). Each column of graphs represents an algorithm, as PPO2 and ACKTR runs from left to right respectively. Each row of graphs represents a game as Q*Bert, Pong, Space Invaders and Demon Attack from top to bottom respectively. The titles of the graphs follow the naming convention: game\_algorithm. The legend follows the naming convention: source-game\_target-game\_number-of-timesteps\_algorithm\_run-number}
 \end{figure*}
- 
+
+\begin{table*}[]
+	\begingroup
+	\renewcommand{\arraystretch}{1.2}
+	\begin{tabular}{p{1.3cm}p{1cm}p{0.9cm}p{1cm}p{1.3cm}p{1.2cm}p{1.2cm}p{0.7cm}p{0.7cm}p{0.7cm}p{0.7cm}p{0.7cm}}
+		\multicolumn{12}{c}{Results of Experiments} \\
+		\hline
+		&  &  &  &  &  &  & \multicolumn{5}{c}{\thead{Normalised Score}} \\
+		\multirow{-2}{*}{\thead{Target task}} & \multirow{-2}{*}{\thead{Source\\ task}} & \multirow{-2}{*}{\thead{Algorithm}} & \multirow{-2}{*}{\thead{Time-to\\-threshold\\(timesteps)}} & \multirow{-2}{*}{\thead{Reward at \\time-to\\-threshold\\ of baseline run}} & \multirow{-2}{*}{\thead{Mean\\ Reward}} & \multirow{-2}{*}{\thead{Standard\\ deviation}} & \textbf{0M} & \textbf{2.5M} & \textbf{5M} & \textbf{7.5M} & \textbf{9.9M} \\
+		\hline
+		\rowcolor[HTML]{EFEFEF} 
+		\cellcolor[HTML]{EFEFEF} & - & \cellcolor[HTML]{EFEFEF} & \textbf{6532761} & \textbf{13471.05} & 6836.744 & 2639.221 & 0.024 & 0.273 & 0.737 & \textbf{1.023} & \textbf{1.039} \\
+		\rowcolor[HTML]{EFEFEF} 
+		\cellcolor[HTML]{EFEFEF} & DA & \cellcolor[HTML]{EFEFEF} & 8549481 & 13462.625 & \textbf{7493.368} & 2583.759 & 0.021 & \textbf{0.348} & \textbf{0.746} & 0.92 & 1.037 \\
+		\rowcolor[HTML]{EFEFEF} 
+		\cellcolor[HTML]{EFEFEF} & SI & \cellcolor[HTML]{EFEFEF} & - & - & 6321.353 & 2714.467 & \textbf{0.03} & 0.28 & 0.57 & 0.828 & 0.955 \\
+		\rowcolor[HTML]{EFEFEF} 
+		\cellcolor[HTML]{EFEFEF} & Pong & \multirow{-4}{*}{\cellcolor[HTML]{EFEFEF}PPO2} & - & - & 6124.969 & 2486.774 & 0.001 & 0.265 & 0.669 & 0.899 & 0.942 \\
+		\rowcolor[HTML]{C0C0C0} 
+		\cellcolor[HTML]{EFEFEF} & - & \cellcolor[HTML]{C0C0C0} & \textbf{9000000*} & \textbf{13460*} & \textbf{4805.455} & 1598.237 & 0.017 & 0.147 & \textbf{0.508} & \textbf{0.818} & \textbf{1.059} \\
+		\rowcolor[HTML]{C0C0C0} 
+		\cellcolor[HTML]{EFEFEF} & DA & \cellcolor[HTML]{C0C0C0} & - & - & 4317.195 & 1418.888 & \textbf{0.02} & \textbf{0.158} & 0.346 & 0.735 & 0.965 \\
+		\rowcolor[HTML]{C0C0C0} 
+		\cellcolor[HTML]{EFEFEF} & SI & \cellcolor[HTML]{C0C0C0} & - & - & 3754.789 & 1491.958 & 0.018 & 0.118 & 0.355 & 0.62 & 0.864 \\
+		\rowcolor[HTML]{C0C0C0} 
+		\multirow{-8}{*}{\cellcolor[HTML]{EFEFEF}Q*Bert} & Pong & \multirow{-4}{*}{\cellcolor[HTML]{C0C0C0}ACKTR} & - & - & 285.993 & 111.914 & 0.019 & 0.021 & 0.022 & 0.021 & 0.021 \\
+		\rowcolor[HTML]{EFEFEF} 
+		\cellcolor[HTML]{C0C0C0} & - & \cellcolor[HTML]{EFEFEF} & 5192064 & 7.614 & 1.73 & 5.202 & 0.035 & 0.546 & 0.924 & 1.092 & 1.131 \\
+		\rowcolor[HTML]{EFEFEF} 
+		\cellcolor[HTML]{C0C0C0} & QB & \cellcolor[HTML]{EFEFEF} & 2900590 & \textbf{10.059} & \textbf{8.993} & 3.865 & 0.122 & \textbf{0.967} & 1.171 & 1.21 & \textbf{1.239} \\
+		\rowcolor[HTML]{EFEFEF} 
+		\cellcolor[HTML]{C0C0C0} & SI & \cellcolor[HTML]{EFEFEF} & 3868794 & 8.221 & 7.528 & 4.289 & \textbf{0.148} & 0.693 & 1.096 & 1.173 & 1.199 \\
+		\rowcolor[HTML]{EFEFEF} 
+		\cellcolor[HTML]{C0C0C0} & DA & \multirow{-4}{*}{\cellcolor[HTML]{EFEFEF}PPO2} & \textbf{2760533} & 8.884 & 8.698 & 4.405 & 0.02 & 0.917 & \textbf{1.175} & \textbf{1.224} & 1.26 \\
+		\rowcolor[HTML]{C0C0C0} 
+		\cellcolor[HTML]{C0C0C0} & - & \cellcolor[HTML]{C0C0C0} & - & - & -20.303 & 0.837 & 0.022 & 0.021 & 0.023 & 0.025 & 0.025 \\
+		\rowcolor[HTML]{C0C0C0} 
+		\cellcolor[HTML]{C0C0C0} & QB & \cellcolor[HTML]{C0C0C0} & - & - & -21 & 0 & 0 & 0 & 0 & 0 & 0 \\
+		\rowcolor[HTML]{C0C0C0} 
+		\cellcolor[HTML]{C0C0C0} & SI & \cellcolor[HTML]{C0C0C0} & 9650000* & - & \textbf{-4.271} & 4.435 & \textbf{0.064} & \textbf{0.343} & \textbf{0.587} & \textbf{0.786} & \textbf{1.047} \\
+		\rowcolor[HTML]{C0C0C0} 
+		\multirow{-8}{*}{\cellcolor[HTML]{C0C0C0}Pong} & DA & \multirow{-4}{*}{\cellcolor[HTML]{C0C0C0}ACKTR} & - & - & -20.312 & 0.834 & 0.019 & 0.021 & 0.023 & 0.024 & 0.025 \\
+		\rowcolor[HTML]{EFEFEF} 
+		& - & \cellcolor[HTML]{EFEFEF} & - & - & 560.944 & 184.444 & 0.115 & \textbf{0.301} & \textbf{0.369} & 0.426 & 0.446 \\
+		\rowcolor[HTML]{EFEFEF} 
+		& QB & \cellcolor[HTML]{EFEFEF} & - & - & 556.744 & 176.388 & 0.122 & 0.285 & 0.341 & 0.414 & \textbf{0.491} \\
+		\rowcolor[HTML]{EFEFEF} 
+		& Pong & \cellcolor[HTML]{EFEFEF} & - & - & \textbf{570.029} & 186.469 & \textbf{0.155} & 0.288 & 0.361 & \textbf{0.434} & 0.484 \\
+		\rowcolor[HTML]{EFEFEF} 
+		Space & DA & \multirow{-4}{*}{\cellcolor[HTML]{EFEFEF}PPO2} & - & - & 552.783 & 188.135 & 0.13 & 0.279 & 0.351 & 0.428 & 0.464 \\
+		\rowcolor[HTML]{C0C0C0} 
+		\cellcolor[HTML]{EFEFEF}Invaders & - & \cellcolor[HTML]{C0C0C0} & - & - & \textbf{552.3} & 204.922 & 0.095 & \textbf{0.328} & \textbf{0.386} & \textbf{0.4} & \textbf{0.435} \\
+		\rowcolor[HTML]{C0C0C0} 
+		\cellcolor[HTML]{EFEFEF} & QB & \cellcolor[HTML]{C0C0C0} & - & - & 536.671 & 192.958 & \textbf{0.122} & 0.295 & 0.368 & 0.388 & 0.402 \\
+		\rowcolor[HTML]{C0C0C0} 
+		\cellcolor[HTML]{EFEFEF} & Pong & \cellcolor[HTML]{C0C0C0} & - & - & 168.104 & 120.654 & 0.101 & 0.103 & 0.101 & 0.101 & 0.102 \\
+		\rowcolor[HTML]{C0C0C0} 
+		\cellcolor[HTML]{EFEFEF} & DA & \multirow{-4}{*}{\cellcolor[HTML]{C0C0C0}ACKTR} & - & - & 401.872 & 151.412 & 0.109 & 0.208 & 0.258 & 0.297 & 0.328 \\
+		\rowcolor[HTML]{EFEFEF} 
+		\cellcolor[HTML]{C0C0C0} & - & \cellcolor[HTML]{EFEFEF} & \textbf{3991621} & 3436.1 & \textbf{4057.996} & 2146.892 & \textbf{0.114} & \textbf{0.665} & \textbf{1.270} & \textbf{1.868} & \textbf{2.423} \\
+		\rowcolor[HTML]{EFEFEF} 
+		\cellcolor[HTML]{C0C0C0} & QB & \cellcolor[HTML]{EFEFEF} & 4383013 & 3357.715 & 3575.717 & 1861.045 & 0.092 & 0.55 & 1.127 & 1.738 & 2.384 \\
+		\rowcolor[HTML]{EFEFEF} 
+		\cellcolor[HTML]{C0C0C0} & SI & \cellcolor[HTML]{EFEFEF} & 4497993 & \textbf{3481.975} & 3707.99 & 1807.019 & 0.086 & 0.57 & 1.151 & 1.867 & 2.34 \\
+		\rowcolor[HTML]{EFEFEF} 
+		\cellcolor[HTML]{C0C0C0}Demon & Pong & \multirow{-4}{*}{\cellcolor[HTML]{EFEFEF}PPO2} & 4025153 & 3390.79 & 3864.239 & 1758.679 & 0.105 & 0.648 & 1.232 & 1.838 & 2.279 \\
+		\rowcolor[HTML]{C0C0C0} 
+		Attack & - & \cellcolor[HTML]{C0C0C0} & \textbf{7532775} & \textbf{3748.935} & \textbf{2467.906} & 1655.131 & \textbf{0.056} & \textbf{0.538} & \textbf{0.928} & \textbf{1.094} & \textbf{1.233} \\
+		\rowcolor[HTML]{C0C0C0} 
+		& QB & \cellcolor[HTML]{C0C0C0} & - & - & 172.585 & 105.258 & 0.054 & 0.053 & 0.051 & 0.051 & 0.052 \\
+		\rowcolor[HTML]{C0C0C0} 
+		& SI & \cellcolor[HTML]{C0C0C0} & - & - & 1554.872 & 1166.664 & 0.05 & 0.301 & 0.588 & 0.739 & 0.751 \\
+		\rowcolor[HTML]{C0C0C0} 
+		& Pong & \multirow{-4}{*}{\cellcolor[HTML]{C0C0C0}ACKTR} & - & - & 173.387 & 107.346 & 0.052 & 0.051 & 0.05 & 0.05 & 0.051 \\
+		\hline
+	\end{tabular}
+
+\endgroup
+\caption{The results of the analysis of the experimental data. Each column corresponds to one of the metrics we selected to study the effects of TL. Entries emboldened represent the maximum or the minimum of the respective metric within the (algorithm, target task) combination. Entries with `-` mean the threshold was never reached within 10M timesteps. For cells with *, the values were approximated manually by finding time at which the average of the two runs reaches the threshold because one of the runs does not reach the threshold within 10M frames.}
+\end{table*}
+
+\begin{table*}[]
+	\begingroup
+	\begin{tabular}{p{3cm}p{1cm}p{1cm}p{1cm}p{1cm}p{1cm}p{1cm}p{1cm}p{1cm}}
+		\multicolumn{9}{c}{\textbf{Effect of Transfer Learning}} \\
+		Source Task & \multicolumn{2}{c}{Q*Bert} & \multicolumn{2}{c}{Pong} & \multicolumn{2}{c}{Space Invaders} & \multicolumn{2}{c}{Demon Attack} \\
+		Target task & \cellcolor[HTML]{ECF4FF}PPO2 & \cellcolor[HTML]{ECF4FF}ACKTR & \cellcolor[HTML]{ECF4FF}PPO2 & \cellcolor[HTML]{ECF4FF}ACKTR & \cellcolor[HTML]{ECF4FF}PPO2 & \cellcolor[HTML]{ECF4FF}ACKTR & \cellcolor[HTML]{ECF4FF}PPO2 & \cellcolor[HTML]{ECF4FF}ACKTR \\
+		Q*Bert & - & - & \cellcolor[HTML]{FFCE93}-ve & \cellcolor[HTML]{FFCE93}-ve & \cellcolor[HTML]{FFCE93}-ve & \cellcolor[HTML]{FFCE93}-ve & \cellcolor[HTML]{9AFF99}+ve & \cellcolor[HTML]{9AFF99}+ve \\
+		Pong & \cellcolor[HTML]{9AFF99}+ve & \cellcolor[HTML]{FFCE93}-ve & - & - & \cellcolor[HTML]{9AFF99}+ve & \cellcolor[HTML]{9AFF99}+ve & \cellcolor[HTML]{9AFF99}+ve & \cellcolor[HTML]{FFCE93}-ve \\
+		Space Invaders & \cellcolor[HTML]{FFCE93}-ve & \cellcolor[HTML]{FFCE93}-ve & \cellcolor[HTML]{9AFF99}+ve & \cellcolor[HTML]{FFCE93}-ve & - & - & \cellcolor[HTML]{FFCE93}-ve & \cellcolor[HTML]{FFCE93}-ve \\
+		Demon Attack & \cellcolor[HTML]{FFCE93}-ve & \cellcolor[HTML]{FFCE93}-ve & \cellcolor[HTML]{FFCE93}-ve & \cellcolor[HTML]{FFCE93}-ve & \cellcolor[HTML]{FFCE93}-ve & \cellcolor[HTML]{FFCE93}-ve & - & -
+	\end{tabular}
+\endgroup
+\caption{ A matrix representing the instances of positive and negative transfer with respect to each (source,target) task combination. Red colour indicates negative transfer and Green colour indicates positive transfer.}
+\end{table*}
 We observe that in the qb\_ppo2, qb\_acktr, and pong\_acktr graphs, the baseline never reaches human-level playing ability within the 10M time frames that the algorithms were given to learn to play the video games. 
 PPO2 implementations completely exceed human-level performance in both Pong and Demon Attack, partially reaches or exceeds human-level performance in Q*Bert, but fails to reach human-level performance in Space Invaders. 
 In comparison, the ACKTR baseline implementation reaches human-level performance in Demon Attack but only one implementation of ACKTR trained on Space Invaders reaches human-level performance, while all other implementations fail to get close to human-level performance. Only one baseline implementation of ACKTR exceeds human-level performance in Q*Bert, as does one implementation of Demon Attack initialised weights. The second baseline implementation, as well as the other initialisation of Demon Attack and both Space Invaders initialised weights all get roughly as effective at the game. It is also worth pointing out that the Pong initialised weights implemented on both Demon Attack and Q*Bert score 0, but not for Space Invaders as no implementation gets close to reaching human-level performance in Space Invaders. The implementation only comes close to human-level performance in Pong when transferring weights from Space Invaders, and otherwise does not improve at all. The Pong baselines do not improve within 10M timesteps either.
 We also observe that, generally, the scores of the self transfer runs approximately start at the final achieved score from the base run, except for qb\_acktr and da\_acktr.
 Table ? shows the results after analysis of the data which is used for the inferences drawn below.
 
------------------------------------------
 \section{Inferences}
 \subsubsection*{Jumpstart vs. learning curve vs. asymptotic performance}
 TL provides a sizeable jumpstart for PPO2 both with Space Invaders as target task, Pong as source task and vice versa. This might indicate a commonality between the games that allows for a jumpstart but not for a very significant asymptotic performance increase. PPO2 with Pong as a source task and Space Invaders as target task also shows the best learning curve, as it shows the highest mean reward. In general, the base runs of the games have the best learning curves, based on the mean averages. 
@@ -428,11 +551,9 @@ Comparing the effects of TL between the two algorithms, there doesn’t seem to 
 \subsubsection*{Hypothesis - effect of game similarity and TL}
 Our hypothesis seems to have been wrong since these results are counter-intuitive in the sense that TL does not prove most effective for (source, target) tasks that are conceptually similar. In fact the most interesting results arise for (source, target) task pairs that are conceptually dissimilar.
 
------------------------------------------
 \section{Conclusion}
 In this paper an empirical research is conducted on the effects of Transfer Learning on the performance of ACKTR and PPO2 on playing Pong, Demon Attack, Space Invaders and Q*Bert. This research is meant to be viewed as a pilot study, intended to develop insights into the effects TL bears on the performance of these algorithms and the methodology of research that could be followed to conduct studies into the virtual-technological phenomena exhibited by algorithms when performing TL. The results show positive effects of Transfer Learning on particular source and target task combinations, while also causing negative effects on other combinations. Generally, TL has noticeable effect on the performance of ACKTR, either positive or negative, and shows little effect on the performance of PPO2. However, the results show that it is not straightforward to predict when TL will be beneficial since they show that performance is not benefited when learning is transferred across conceptually similar games. This shows that factors like visual complexity and similarity, might weigh in more than the conceptual similarity of the games to the prediction of the outcome of TL.
 
------------------------------------------
 \section{Discussion}
 Reflecting on the execution of our research and the phenomena that were observed, we have come up with several points of discussion. 
 
@@ -446,7 +567,7 @@ In this study, we have not attempted to study the effects of the hyperparameters
 A level of analysis that lies just outside the scope of this study is to execute was an evaluation of the changes between the initial model parameters and the final model parameters. This could be a method to compare the interpretation of abstraction created by the network, given that the early layers account for the more abstract processing of the input (Ng, 2017). The inability to access these weights also raises ethical concerns since we would not know exactly how the algorithm is achieving its goal. Since the overarching goal is to progress towards AGI, and as Bostrom and Muehlhauser (2014) argue, AGI could present an existential threat to the human species, it would be crucial to understanding how such an algorithm achieves its goal. 
 
 Development of algorithms with greater generalisability could be benefited by developing a method that ascribes conceptual meaning to the input processed by the CNN, which then inputs this conceptual meaning into a learning algorithm. This development could benefit generalisability since the counterintuitive results possibly arise from the dependency of the algorithm on the frame input and are therefore directly influenced by visual complexity, which would be alleviated by assigning conceptual meaning to the input. 
----------------------------------------
+
 \section{Acknowledgments}
 The setup of this research hinged on the B\&K model introduced by Mieke Boon (2018), who also provided us with feedback and direction throughout the research. We are grateful to her having done so and for the early access to her paper on B\&K. 
 Joost Voskuil was involved in the early planning stages of this study, helped to prepare the first draft of the paper and provided feedback on the work several times during the research. In multiple stages of the research, Dr. C. Brune was consulted and provided highly appreciated feedback. 
@@ -459,7 +580,7 @@ A statement requiring citation \cite{Figueredo:2009dg}.
 %----------------------------------------------------------------------------------------
 %	REFERENCE LIST
 %----------------------------------------------------------------------------------------
-
+\Urlmuskip=0mu plus 1mu\relax
 \begin{thebibliography}{99} % Bibliography - this is intentionally simple in this template
 
 \bibitem[Figueredo and Wolf, 2009]{Figueredo:2009dg}
@@ -468,9 +589,156 @@ Figueredo, A.~J. and Wolf, P. S.~A. (2009).
   study.
 \newblock {\em Human Nature}, 20:317--330.
 
+\bibitem{} Achiam, J., Wu, A., Morales, M., Marciniak, C., Bastovanovicz, M., Hesse, C. (2018) \textit{Part 1: Key Concepts in RL - Spinning Up documentation}. Retrieved from \url{https://spinningup.openai.com/en/latest/spinningup/rl\_intro.html}
 
+\bibitem{} Agarwal, M. (2017, December 14). \textit{Back Propagation in Convolutional Neural Networks -
+Intuition and Code}. Medium. Retrieved from \url{https://becominghuman.ai/back-propagation-in-convolutional-neural-networks-intuition-and-code-714ef1c38199}
 
- 
+\bibitem{} Gopal, A., van der Neut, L. M. B., (2018) AkarshG1, ATLAS\_S3\_RL. GitHub repository,
+\url{https://github.com/AkarshG1/ATLAS\_S3\_RL}
+
+\bibitem{} Andrychowicz, M., Baker, B., Chociej, M., Jozefowicz, R., McGrew, B., Pachocki, J., ... \& Schneider, J. (2018). \textit{Learning dexterous in-hand manipulation}. arXiv preprint arXiv:1808.00177.
+
+\bibitem{} Arulkumaran, K., Deisenroth, M., Brundage, M., \& Bharath, A. (2017). \textit{Deep Reinforcement Learning: A Brief Survey}. IEEE Signal Processing Magazine, 34(6), 26-38. doi: 10.1109/msp.2017.2743240
+
+\bibitem{} Ba, J., Grosse, R., \& Martens, J. (2016). Distributed second-order optimization using Kronecker-factored approximations.
+
+\bibitem{} Baum, S. (2017). "A Survey of Artificial General Intelligence Projects for Ethics, Risk, and Policy." 
+
+\bibitem{} Bellemare, M. G., Naddaf, Y., Veness, J., \& Bowling, M. (2013). The arcade learning
+environment: An evaluation platform for general agents. Journal of Artificial Intelligence Research, 47, 253-279.
+
+\bibitem{} Bellemare, M. G., Veness, J., \& Bowling, M. (2012, July). Investigating Contingency Awareness Using Atari 2600 Games. In AAAI.
+
+\bibitem{} Bellman, R. (1957). "A Markovian Decision Process". Journal of Mathematics and Mechanics.
+
+\bibitem{} Boon, M. (2018). Scientific Methodology in the Engineering Sciences. In D. Michelfelder and N. Doorn (version of May 14th 2018), Routledge Handbook of Philosophy of Engineering. Scheduled for publishing in 2019.
+
+\bibitem{} Bostrom, N. (2014). Superintelligence (1st ed.). Oxford: Oxford University Press.
+
+\bibitem{} Brockman, G., Cheung, V., Pettersson, L., Schneider, J., Schulman, J., Tang, J., \&
+Zaremba, W. (2016). Openai gym. arXiv preprint arXiv:1606.01540.
+
+\bibitem{} Chokmani, K., Khalil, B., Ouarda, T. B. M. J.,\& Bourdages, R. (2007). Estimation of river ice
+thickness using artificial neural networks. In Proc. 14th Workshop Hydraulics Ice Covered Rivers. CGU HS/CRIPE (p. 12).
+
+\bibitem{} Dixit, Avinash K. (1990). Optimization in Economic Theory (Second ed.). Oxford: Oxford University Press. p. 164. ISBN 0-19-877211-4.
+
+\bibitem{} Einstein, A. (1916). The foundation of the general theory of relativity. Annalen Phys., 14, 769-822.
+
+\bibitem{} Gillis, J. (2006). The gradient descent algorithm in action. (1: contour). Wikipedia. Retrieved
+from \url{https://en.wikipedia.org/wiki/Gradient\_descent\#/media/File:Gradient\_ascent\_(contour).png}
+
+\bibitem{} Glatt, R., Silva, F., \& Costa, A. (2016). Towards Knowledge Transfer in Deep Reinforcement Learning. 2016 5Th Brazilian Conference On Intelligent Systems (BRACIS). doi: 10.1109/bracis.2016.027
+
+\bibitem{} Goodfellow, I., Bengio, Y., Courville, A., \& Bengio, Y. (2016). Deep learning (Vol. 1).
+Cambridge: MIT press.
+
+\bibitem{} Guo, X., Singh, S., Lee, H., Lewis, R. L., \& Wang, X. (2014). Deep learning for real-time Atari game play using offline Monte-Carlo tree search planning. In Advances in neural information processing systems (pp. 3338-3346).
+
+\bibitem{} Hausknecht, M. J., \& Stone, P. (2015, January). The Impact of Determinism on Learning
+Atari 2600 Games. In AAAI Workshop: Learning for General Competency in Video Games.
+
+\bibitem{} Hawking, S., \& Stone, G. (1992). A Brief History of Time: A Readers Companion. Bantam.
+
+\bibitem{} Kakade, S. M. (2002). A natural policy gradient. In Advances in neural information processing systems (pp. 1531-1538).
+
+\bibitem{} Kimura, H. and Kobayashi, S. (1998). An analysis of actor/critic algorithms using eligibility traces:
+Reinforcement learning with imperfect value function. ICML, pp. 278–286.
+
+\bibitem{} Kirk, D. E. (1970). Optimal control theory: an introduction. Springer.
+
+\bibitem{} Kunz, F. (2000). An introduction to temporal difference learning. In Seminar on Autonomous Learning Systems.
+
+\bibitem{} Kurzweil, R. (2005), The Singularity is Near, Viking Press, ISBN 0-14-303788-9, OCLC 71826177.
+
+\bibitem{} Laird, J. E., Newell, A., \& Rosenbloom, P. S. (1987). Soar: An architecture for general intelligence. Artificial intelligence, 33(1), 1-64.
+
+\bibitem{} LeCun, Y., Bengio, Y., Hinton, G. (2015). \textit{Deep Learning}. Nature, vol. 521, no. 7553, pp. 436-444.
+
+\bibitem{} Levine, J., Bates Congdon, C., Ebner, M., Kendall, G., Lucas, S. M., Miikkulainen, R., ... \& Thompson, T. (2013). \textit{General video game playing}.
+
+\bibitem{} Ma, Y., Xiang, Z., Du, Q., \& Fan, W. (2018). Effects of user-provided photos on hotel review
+helpfulness: An analytical approach with deep learning. International Journal of Hospitality Management, 71, 120-131.
+
+\bibitem{} Machado, M. C., Bellemare, M. G., Talvitie, E., Veness, J., Hausknecht, M., \& Bowling, M.
+(2017). \textit{Revisiting the arcade learning environment: Evaluation protocols and open problems for general agents}. Journal of Artificial Intelligence Research, 61, 523-562.
+
+\bibitem{} Markov, A. A. (1954). The theory of algorithms. Trudy Matematicheskogo Instituta Imeni VA Steklova, 42, 3-375.
+
+\bibitem{} Martens, J., \& Grosse, R. (2015, June). \textit{Optimizing neural networks with kronecker-factored approximate curvature}. In International conference on machine learning (pp. 2408-2417).
+
+\bibitem{} McClelland, J. L. (2015, December 16).\textit{ Explorations in Parallel Distributed Processing: A
+Handbook of Models, Programs, and Exercises.}
+
+\bibitem{} Muehlhauser, L., \& Bostrom, N. (2014).\textit{ Why we need friendly AI.} Think, 13(36), 41-47.
+
+\bibitem{} Muehlhauser, L. (2014). \textit{What is AGI?}. Machine Intelligence Research Institute. 
+
+\bibitem{} Mnih, V., Badia, A. P., Mirza, M., Graves, A., Lillicrap, T., Harley, T., ... \& Kavukcuoglu, K.
+(2016, June). \textit{Asynchronous methods for deep reinforcement learning}. In International conference on machine learning (pp. 1928-1937).
+
+\bibitem{} Mnih, V., Kavukcuoglu, K., Silver, D., Rusu, A. A., Veness, J., Bellemare, M. G., ... \& Petersen, S. (2015). \textit{Human-level control through deep reinforcement learning}. Nature, 518(7540), 529.
+
+\bibitem{} Mnih, V., Kavukcuoglu, K., Silver, D., Graves, A., Antonoglou, I., Wierstra, D., \& Riedmiller,
+M. (2013). \textit{Playing atari with deep reinforcement learning}. arXiv preprint arXiv:1312.5602.
+
+\bibitem{} Ng, A. (2017).\textit{ Machine Learning}, by Stanford University on Coursera.
+
+\bibitem{} Ng, A. (2018). \textit{Convolutional Neural Networks}, by deeplearning.ai on Coursera.
+
+\bibitem{} Newton, I. (1934). \textit{Principia Mathematica}. Newton's principia, 634.
+
+\bibitem{} OpenAIa, Baselines, (2018), GitHub repository, \url{https://github.com/openai/baselines}
+
+\bibitem{} OpenAIb, Gym, (2018), GitHub repository, \url{https://github.com/openai/gym/blob/master/gym}
+
+\bibitem{} Pan, S., \& Yang, Q. (2010). \textit{A Survey on Transfer Learning}. IEEE Transactions On Knowledge And Data Engineering, 22(10), 1345-1359. doi: 10.1109/tkde.2009.191
+
+\bibitem{} Patel, Y. (2017, July 30). \textit{Reinforcement Learning w/ Keras + OpenAI: Actor-Critic Models}.
+Medium. Retrieved from \url{https://towardsdatascience.com/reinforcement-learning-w-keras-openai-actor-critic-models-f084612cfd69}
+
+\bibitem{} Russell, Stuart J.; Norvig, Peter (2003),\textit{ Artificial Intelligence: A Modern Approach} (2nd ed.), Upper Saddle River, New Jersey: Prentice Hall, ISBN 0-13-790395-2.
+
+\bibitem{} Schmidhuber, J. (2015).\textit{ Deep learning in neural networks: An overview.} Neural networks,
+61, 85-117.
+
+\bibitem{} Schulman, J., Wolski, F., Dhariwal, P., Radford, A., \& Klimov, O. (2017). \textit{Proximal policy
+optimization algorithms}. arXiv preprint arXiv:1707.06347.
+
+\bibitem{} Schulman, J., Moritz, P., Levine, S., Jordan, M., Abbeel, P. (2015). \textit{High-Dimensional Continuous Control Using Generalized Advantage Estimation}. arXiv:1506.02438
+
+\bibitem{} Schulman, J., Levine, S., Abbeel, P., Jordan, M., \& Moritz, P. (2015, June). \textit{Trust region policy optimization}. In International Conference on Machine Learning (pp. 1889-1897).
+
+\bibitem{} Hoo-Chang, S., Roth, H. R., Gao, M., Lu, L., Xu, Z., Nogues, I., ... \& Summers, R. M. (2016).\textit{ Deep convolutional neural networks for computer-aided detection: CNN architectures, dataset characteristics and transfer learning}. IEEE transactions on medical imaging, 35(5), 1285.
+
+\bibitem{} Skinner, B. (1953) \textit{Science and Human Behavior}. Colliler-Macmillian.
+
+\bibitem{} Sutton, R. S., \& Barto, A. G. (1998).\textit{ Introduction to reinforcement learning} (Vol. 135).
+Cambridge: MIT press.
+
+\bibitem{} Taylor, M., and Stone, P (2007). \textit{Cross-domain transfer for reinforcement learning}. In Proceedings of the Twenty-Fourth International Conference on Machine Learning, June 2007b.
+
+\bibitem{} Taylor, M., \& Stone, P. (2009).\textit{ Transfer Learning for Reinforcement Learning Domains: A Survey}. Retrieved from http://www.jmlr.org/papers/v10/taylor09a.html
+
+\bibitem{} TechnoReview. (2013, June).\textit{ Artificial Neural Network : Beginning of the AI revolution.}
+Medium. Retrieved from \url{https://hackernoon.com/artificial-neural-network-a843ff870338}
+
+\bibitem{} Thorndike, E., and Woodworth, R.,(1901). \textit{The influence of improvement in one mental function upon the efficiency of other functions}. Psychological Review, 8:247–261.
+
+\bibitem{} Van Hasselt, H., Guez, A., \& Silver, D. (2016, February). \textit{Deep Reinforcement Learning with
+Double Q-Learning}. In AAAI (Vol. 2, p. 5).
+
+\bibitem{} Watkins, C. J., \& Dayan, P. (1992).\textit{ Q-learning}. Machine learning, 8(3-4), 279-292.
+
+\bibitem{} Weiss, K., Khoshgoftaar, T., \& Wang, D. (2016). \textit{A survey of transfer learning.} Journal Of Big Data, 3(1). doi: 10.1186/s40537-016-0043-6
+
+\bibitem{} Wolf, M. J. (2013). \textit{Abstraction in the video game}. In The video game theory reader (pp. 69-88). Routledge.
+
+\bibitem{} Wu, Y., Mansimov, E., Grosse, R. B., Liao, S., \& Ba, J. (2017).\textit{ Scalable trust-region method for deep reinforcement learning using kronecker-factored approximation}. In Advances in neural information processing systems (pp. 5279-5288).
+
+\bibitem{} Yuan, Y. (2015). \textit{Recent advances in trust region algorithms}. Mathematical Programming, 151(1), 249-281. doi: 10.1007/s10107-015-0893-2
+
 \end{thebibliography}
 
 %----------------------------------------------------------------------------------------
@@ -491,7 +759,7 @@ Standard neural networks consist of many, fairly simple, nodes that compute an a
 \paragraph{Forward propagation}
 In Figure 9  The inputs on the left-hand side are the outputs of all neurons of the earlier layer or constitute the vectorised input from the environment to the network (input layer). Based on the output of the last layer conclusions on the input are drawn (Schmidhuber, 2016) and is called the output layer. Every layer between the output and the input layer are called hidden layers. Each node multiplies all its inputs with a weight respectively, takes the sum of this (Ij), and this creates the input for the activation function (f). The output of the activation function (Oj) is a single number, serves as the output of the single node, and creates part of the input for the next layer of neurons. The activation function ensures that the output of the neuron lies in the desired range and creates a non-linear system. Only then is the network able to solve non-trivial problems with complex solutions, otherwise, it would only compute a linear function Wx of the input x, no matter how deep the network is (Goodfellow et al., 2016). For binary classification problems, the sigmoid function is widely used, as seen in Figure 9. (TechnoReview, 2013)
 
-\paragraph{Backpropagation}
+\paragraph{Back-Propagation}
 The weights that are multiplied with input of the node are adjusted in the backpropagation through the network. In backpropagation the weights in the network are commonly adjusted according to the first order derivative of the cost function (expected return) with respect to the parameters of the model, like square meters, number of rooms, and number of bathrooms are parameters when determining the price of a house. The aim of any algorithm is to maximise the cost function, its goal is determined by how this cost function is defined. Algorithms that directly adjust their weights according to the cost function are called policy-based learning algorithms (Goodfellow et al., 2016).
 
 \subsubsection*{Convolutional Neural Networks (CNN)}
@@ -499,7 +767,7 @@ The weights that are multiplied with input of the node are adjusted in the backp
 
 CNNs are able to process images and frames of videos with a slightly different set-up than regular neural networks. The CNN takes in a matrix representation of the picture or frame of the video. The matrix representation stores the intensity of a certain colour in every pixel for every pixel. With greyscale input, there is only one matrix and a full-colour input has a representation of three matrices stacked on top of each other, red, green, and blue respectively. These matrices are processed in two ways in one convolution layer, namely using convolution and pooling. 
 
-\begin{figure*}[ht]
+\begin{figure*}[h]
 	\includegraphics[width=\textwidth]{fig10.png} 
 	\caption{Layers of a CNN (Ma, Xiang, Du, \& Fan, 2018).}
 \end{figure*}
@@ -515,10 +783,10 @@ Pooling is done per section of the matrix and has multiple versions. This sectio
 After proceeding through the first layer, explained by the steps above, the next convolution layer then scans over the results of the pooling of the earlier layer, executes the convolution, and pools them. The matrices shrink in the convolution step under the influence of the size of the mask and the \lq stride\rq . The stride is the step size with which the mask moves across the earlier matrix. In the pooling layer, the matrix shrinks under the influence of the size of the sections. 
 After running the desired number of convolutional layers with the desired settings, the matrix is flattened out into one long vector. This vector is then processed by fully connected layers which are essentially the same as the neural network described before but take the output of the convolutional layers as input. This then serves to identify objects in the image, select a preferred action given the image, or recognise faces, depending on the goal of the network.
 
-\paragraph{Backward Propagation}
+\paragraph{Back-Propagation}
 In the backward propagation of the CNN, the values of the masks (middle and last matrix) are updated. The values of the mask are comparable to the weights of a simple neural network. The values of the mask are then updated according to the
 
-\begin{figure*}[ht]
+\begin{figure*}[h]
 	\includegraphics[width=\textwidth]{fig11.png} 
 	\caption{(Agarwal, 2017), the derivative of the cost function just as a normal neural network but it updates the value according to the sum of the derivatives of the cost function (shown in the middle matrix) with respect to each value that is taken into account by a specific value in the mask (first matrix)}
 \end{figure*}
@@ -535,19 +803,93 @@ $2^{nd}$ order optimization is a very computationally expensive process when thi
 \subsubsection*{Difference between policy-based and value-based learning}
 Apart from the policy-based learning algorithms, there are value based learning algorithms. These algorithms are trained to estimate the value of a variable given a certain state from the environment it is evaluating. This algorithm cannot directly update its parameters since it is concerned with estimating a value that lies in the future (time + 1). It cannot calculate a cost function because it needs the next run to determine whether its estimation was accurate and only then can the algorithm update its weights (Sutton \& Barto, 1998; McClelland, 2015). The remaining process of learning of value-based learning algorithms is similar to what was described earlier.
 
-\subsection*{B}
-\begin{table*}[]
-	\begin{tabular}{ |l|p{5cm}p{5cm}  }
+
+\begin{table*}[h]
+	\begin{tabular}{ |l|p{5cm}p{5cm}|  }
 		\hline
-		Device                  & \multicolumn{1}{c}{1}                                      & \multicolumn{1}{c}{2}                                     \\ \hline
+		Device                  & \thead{1}                                      & \thead{2}                                     \\ \hline
 		Device name             & Lenovo Thinkpad P51                                        & Dell Inspiron 15 gaming 7567                              \\
 		Processor               & Intel(R) Core$^{TM}$ i7-7700HQ cpu @ 2.80GHz, 2808 Mhz         & Intel(R) Core$^{TM}$ i7-7700HQ cpu @ 2.80GHz, 2808 Mhz        \\
 		Random Access Memory    & 16GB / 2400MHz DDR4, non-ECC                               & 16GB / 2400MHz DDR4, non-ECC                              \\
 		Primary Graphics Card   & NVIDIA Quadro M1200 (4096MB; CUDA compute capability: 5.0) & Nvidia GTX 1050-Ti (4096 MB; CUDA compute capability 6.1) \\
 		Secondary Graphics Card & Intel(R) HD Graphics 630                                   & Intel(R) HD Graphics 630                                  \\ \hline
 	\end{tabular}
+\caption{Device Hardware Specifications}
 \end{table*}
 
-\subsection*{C}
-\subsection*{D}
+\begin{table*}[]
+	\begin{tabular}{ll}
+		\multicolumn{2}{c}{Software set-up} \\
+		\hline
+		Operating System: & Linux Ubuntu 18.10 (same on both devices) \\
+		Graphics driver: & Nvidia driver 396.54 (same on both devices) \\
+		CUDA: & CUDA 9.0 (Same on both devices) \\
+		Python: & 3.6.3 (device 1), 3.6.6 (device 2) \\
+		Dependencies: & See requirements.txt (Gopal, van der Neut, 2018) \\
+		\hline
+	\end{tabular}
+\caption{Software Setup for the study}
+\end{table*}
+
+\begin{table*}[]
+	\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline
+		\thead{Device 1} & \thead{Device 2} \\ \hline
+		- & PPO2 on SpaceInvaders x2 and Pong x1 \\ \hline
+		ACKTR on SpaceInvaders x2 & PPO2 on Pong and DemonAttack x2 \\ \hline
+		ACKTR on DemonAttack x2 & PPO2 and ACKTR base SpaceInvaders on Pong \\ \hline
+		ACKTR on Pong x2 & ACKTR base SpaceInvaders on DemonAttack x2 \\ \hline
+		ACKTR on Q*Bert x2 & PPO2 base SpaceInvaders on Q*Bert x2 \\ \hline
+		ACKTR base SpaceInvaders on Q*Bert x2 & PPO2 base SpaceInvaders on DemonAttack x2 \\ \hline
+		ACKTR base Q*Bert on SpaceInvaders x2 & PPO2 base Q*Bert on SpaceInvaders x2 \\ \hline
+		ACKTR base Q*Bert on Pong x2 & PPO2 base Q*Bert on Pong x2 \\ \hline
+		ACKTR base Q*Bert on DemonAttack x2 & PPO2 base Q*Bert on DemonAttack x2 \\ \hline
+		ACKTR base Pong on SpaceInvaders x2 & PPO2 base Pong on SpaceInvaders x2 \\ \hline
+		ACKTR base Pong on Q*Bert x2 & PPO2 base Pong on Q*Bert x2 \\ \hline
+		ACKTR base Pong on DemonAttack x2 & PPO2 base Pong on DemonAttack x2 \\ \hline
+		ACKTR base DemonAttack on SpaceInvaders x2 & PPO2 base DemonAttack on SpaceInvaders x2 \\ \hline
+		ACKTR base DemonAttack on Q*Bert x2 & PPO2 base DemonAttack on Q*Bert x2 \\ \hline
+		ACKTR base DemonAttack on Pong x2 & PPO2 base DemonAttack on Pong x2 \\ \hline
+		ACKTR base SpaceInvaders on SpaceInvaders, ACKTR base DemonAttack on DemonAttack & PPO2 base SpaceInvaders on SpaceInvaders, PPO2 base DemonAttack on DemonAttack \\ \hline
+		ACKTR base Pong on Pong, ACKTR base Q*Bert on Q*Bert & PPO2 base Pong on Pong, PPO2 base Q*Bert on Q*Bert \\ \hline
+	\end{tabular}
+\caption{Training runs per device in chronological order}
+\end{table*}
+
+
+\subsection*{B}
+\begin{itemize}
+	\item Hardware Specifications: Table 5
+	\item Software Setup: Table 6
+	\item Training Runs per device in chronological order: Table 7
+	\item Hyperparameters: Table 8
+	\item Graphs of Raw Data: Figure 13
+\end{itemize}
+
+\begin{table*}[]
+	\begin{tabular}{l|ll}
+		\thead{Hyperparameters} & \thead{PPO2} & \thead{ACKTR} \\
+		\hline
+		Network & Nature CNN & Nature CNN \\
+		nsteps & 2048 & 20 \\
+		Discount & 0.99 & 0.99 \\
+		GAE parameter (λ) & 0.95 & 0.95 \\
+		Learning rate & 3.00E-04 & 0.25 \\
+		VF coeff.c1(9) & 0.5 & 0.5 \\
+		Entropy coeff. c2(9) & 0 & 0.001 \\
+		Clipping parameter & 0.2 & (KFAC) 0.001 \\
+		Noptepochs & 4 & - \\
+		Numprocs & - & 32 \\
+		VF fisher coeff & - & 1 \\
+		Number of actors & - & 8 \\
+		Lr schedule & - & linear \\
+		\hline
+	\end{tabular}
+\caption{Hyperparameters as extracted from OpenAI Baselines(2018).The terms do not necessarily carry same meaning for both algorithms.}
+\end{table*}
+
+\begin{figure*}[b]
+	\includegraphics[width=\textwidth]{fig13.png} 
+	\caption{Game score(Raw data) at each timestep during the 10M timesteps }
+\end{figure*}
 \end{document}
