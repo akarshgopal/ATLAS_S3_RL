@@ -5,7 +5,7 @@ atomicwrites==1.2.1
 attrs==18.2.0
 backcall==0.1.0
 -e git+https://github.com/openai/baselines.git@52255beda5f5c8760b0ae1f676aa656bb1a61f80#egg=baselines
-bleach==3.0.2
+bleach==3.1.2
 box2d-py==2.3.5
 certifi==2018.10.15
 cffi==1.11.5
